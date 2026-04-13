@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+  name: calc-deployment 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: calc
+  template:
+    metadata: 
+      labels:
+        project: calc
+    spec:
+      containers: 
+        - name: calc
+          image: ben17ly/calc
+          ports:
+            - containerPort: 5000
