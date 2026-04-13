@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: calc-pod
+  labels:
+    project: calc
+spec:
+  containers: 
+    - name: calc
+      image: ben17ly/calc
+      ports:
+        - containerPort: 5000
