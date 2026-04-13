@@ -13,7 +13,7 @@ spec:
         project: calc
     spec:
       containers: 
-        - name: calc
+        - name: objective_driscoll
           image: ben17ly/calc
           ports:
             - containerPort: 5000
